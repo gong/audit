@@ -70,7 +70,7 @@ int fileread(char* path,char* file[]){
  if(count<32)
    break; 
   }
-return i-1;
+return i;
 }
 long filesize(char* path){
   FILE *stream;
