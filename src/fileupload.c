@@ -116,7 +116,7 @@ int main(int argc,char* argv[]){
 	   int c=0;
 	   char** clear;
 	   for(clear=strfile;*clear;clear++){
-	     strfile[c++]=NULL;
+	     strfile[c++]=NULL; 
 	   }
        k++;
        j=0;
