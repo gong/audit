@@ -105,7 +105,7 @@ int main(int argc,char* argv[]){
   sumsector=fileread(path,file);
   
    int k=0;
-   char* strfile[513]={"0"};
+   char* strfile[513]={NULL};
    for(int i=0,j=0;i<sumsector;i++)
    {
       puts(file[i]); 
@@ -113,6 +113,11 @@ int main(int argc,char* argv[]){
       if(j==512||(j<512&&i==sumsector-1))
       {
        insert_into_userdata(session,username,filename,k,strfile);
+	   int c=0;
+	   char** clear;
+	   for(clear=strfile;*clear;clear++){
+	     strfile[c++]=NULL;
+	   }
        k++;
        j=0;
       }
